@@ -38,7 +38,7 @@ pub struct CollisionWorld<N: RealField, T> {
         Option<Box<dyn BroadPhasePairFilter<N, CollisionObject<N, T>, CollisionObjectSlabHandle>>>,
 }
 
-impl<N: RealField, T> CollisionWorld<N, T> {
+impl<N: RealField, T: 'static> CollisionWorld<N, T> {
     /// Creates a new collision world.
     // FIXME: use default values for `margin` and allow its modification by the user ?
     pub fn new(margin: N) -> CollisionWorld<N, T> {

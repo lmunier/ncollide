@@ -130,7 +130,6 @@ pub trait RayCast<N: RealField> {
     }
 
     /// Computes the time of impact, and normal between this transformed shape and a ray.
-    #[inline]
     fn toi_and_normal_with_ray(
         &self,
         m: &Isometry<N>,
